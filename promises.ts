@@ -4,7 +4,7 @@ function fetchData() {
     console.log("Fetching data...");
 
     setTimeout(() => {
-      const success = Math.random() < 0.8; // Simulating success or failure randomly
+      const success = Math.random() < 0.5; // Simulating success or failure randomly
 
       if (success) {
         const data = { name: "John", age: 30 };
