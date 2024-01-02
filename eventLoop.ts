@@ -43,3 +43,39 @@ setTimeout(function () {
 }, 500);
 
 console.log("End");
+
+function two() {
+  console.log("two");
+}
+
+/* => call stack
+x two() 
+  one()
+*/
+
+/* => call stack
+ x one()
+*/
+
+/* => call stack
+
+*/
+
+function one() {
+  console.log("one");
+  two();
+}
+
+one(); // => call stack [one()]
+
+function asyncFunction() {
+  console.log("asyncFunction start");
+
+  setTimeout(() => {
+    console.log("called after 2000");
+  }, 2000);
+
+  console.log("asyncFunction end");
+}
+
+// microtask
